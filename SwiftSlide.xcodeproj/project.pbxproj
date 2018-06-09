@@ -10,6 +10,9 @@
 		AD0A068220CC46A3000E48B5 /* SwiftSlide.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD0A067820CC46A3000E48B5 /* SwiftSlide.framework */; };
 		AD0A068720CC46A3000E48B5 /* SwiftSlideTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD0A068620CC46A3000E48B5 /* SwiftSlideTests.swift */; };
 		AD0A068920CC46A3000E48B5 /* SwiftSlide.h in Headers */ = {isa = PBXBuildFile; fileRef = AD0A067B20CC46A3000E48B5 /* SwiftSlide.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AD0A069320CC46DF000E48B5 /* SwiftSlideNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD0A069220CC46DF000E48B5 /* SwiftSlideNavigationController.swift */; };
+		AD0A069720CC4710000E48B5 /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD0A069620CC4710000E48B5 /* Menu.swift */; };
+		AD0A069920CC4D27000E48B5 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD0A069820CC4D27000E48B5 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +32,9 @@
 		AD0A068120CC46A3000E48B5 /* SwiftSlideTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftSlideTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD0A068620CC46A3000E48B5 /* SwiftSlideTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftSlideTests.swift; sourceTree = "<group>"; };
 		AD0A068820CC46A3000E48B5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AD0A069220CC46DF000E48B5 /* SwiftSlideNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftSlideNavigationController.swift; sourceTree = "<group>"; };
+		AD0A069620CC4710000E48B5 /* Menu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
+		AD0A069820CC4D27000E48B5 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,8 +77,11 @@
 		AD0A067A20CC46A3000E48B5 /* SwiftSlide */ = {
 			isa = PBXGroup;
 			children = (
+				AD0A069520CC4703000E48B5 /* helpers */,
+				AD0A069420CC46F4000E48B5 /* animations */,
 				AD0A067B20CC46A3000E48B5 /* SwiftSlide.h */,
 				AD0A067C20CC46A3000E48B5 /* Info.plist */,
+				AD0A069220CC46DF000E48B5 /* SwiftSlideNavigationController.swift */,
 			);
 			path = SwiftSlide;
 			sourceTree = "<group>";
@@ -84,6 +93,22 @@
 				AD0A068820CC46A3000E48B5 /* Info.plist */,
 			);
 			path = SwiftSlideTests;
+			sourceTree = "<group>";
+		};
+		AD0A069420CC46F4000E48B5 /* animations */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = animations;
+			sourceTree = "<group>";
+		};
+		AD0A069520CC4703000E48B5 /* helpers */ = {
+			isa = PBXGroup;
+			children = (
+				AD0A069620CC4710000E48B5 /* Menu.swift */,
+				AD0A069820CC4D27000E48B5 /* Constants.swift */,
+			);
+			path = helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -148,6 +173,7 @@
 				TargetAttributes = {
 					AD0A067720CC46A2000E48B5 = {
 						CreatedOnToolsVersion = 9.4;
+						LastSwiftMigration = 0940;
 					};
 					AD0A068020CC46A3000E48B5 = {
 						CreatedOnToolsVersion = 9.4;
@@ -194,6 +220,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD0A069320CC46DF000E48B5 /* SwiftSlideNavigationController.swift in Sources */,
+				AD0A069720CC4710000E48B5 /* Menu.swift in Sources */,
+				AD0A069920CC4D27000E48B5 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -339,6 +368,7 @@
 		AD0A068D20CC46A3000E48B5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -356,6 +386,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = meera.solution.inc.SwiftSlide;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -364,6 +395,7 @@
 		AD0A068E20CC46A3000E48B5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -389,6 +421,7 @@
 		AD0A069020CC46A3000E48B5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 982V6XFKZ3;
 				INFOPLIST_FILE = SwiftSlideTests/Info.plist;
@@ -407,6 +440,7 @@
 		AD0A069120CC46A3000E48B5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 982V6XFKZ3;
 				INFOPLIST_FILE = SwiftSlideTests/Info.plist;
